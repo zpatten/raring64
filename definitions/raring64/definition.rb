@@ -1,7 +1,7 @@
 Veewee::Session.declare({
-  :cpu_count => '1',
-  :memory_size=> '2048',
-  :disk_size => '10140',
+  :cpu_count =>   2.to_s,
+  :memory_size=>  (2 * 1024).to_s,
+  :disk_size =>   (16 * 1024).to_s,
   :disk_format => 'VDI',
   :hostiocache => 'on',
   :os_type_id => 'Ubuntu_64',
