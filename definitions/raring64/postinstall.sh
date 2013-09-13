@@ -35,6 +35,18 @@ sed -i -e 's/%admin ALL=(ALL) ALL/%admin ALL=NOPASSWD:ALL/g' /etc/sudoers
 # Install NFS client
 apt-get -y install nfs-common
 
+# Prime LXC
+apt-get -y install lxc lxc-templates
+
+lxc-create -n seed -t ubuntu -- --release lucid
+lxc-destroy -n seed -f
+
+lxc-create -n seed -t ubuntu -- --release precise
+lxc-destroy -n seed -f
+
+lxc-create -n seed -t ubuntu -- --release raring
+lxc-destroy -n seed -f
+
 # Install Ruby from source in /opt so that users of Vagrant
 # can install their own Rubies using packages or however.
 # wget http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p286.tar.gz

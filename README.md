@@ -2,12 +2,16 @@
 
 Veewee Repo for building a Ubuntu 13.04 Server (Raring) 64-bit Vagrant Base Box.
 
+# PRE-SEEDED LXC CACHES
+
+* Lucid (amd64)
+* Precise (amd64)
+* Raring (amd64)
+
 # REQUIREMENTS
 
 * Latest Vagrant; non-gem version.
 
-# USE
+# BUILDING
 
-1. bundle install
-2. bundle exec veewee vbox build 'raring64'
-3. /opt/vagrant/bin/vagrant package --base raring64
+Execute `build.sh`.
