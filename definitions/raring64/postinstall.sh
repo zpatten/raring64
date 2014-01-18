@@ -9,7 +9,6 @@ apt-get -y upgrade
 apt-get -y install linux-headers-$(uname -r) build-essential
 apt-get -y install zlib1g-dev libssl-dev libreadline-gplv2-dev libyaml-dev
 apt-get -y install vim
-apt-get clean
 
 # Installing the virtualbox guest additions
 apt-get -y install dkms
@@ -46,6 +45,8 @@ lxc-destroy -n seed -f
 
 lxc-create -n seed -t ubuntu -- --release raring
 lxc-destroy -n seed -f
+
+apt-get clean
 
 # Install Ruby from source in /opt so that users of Vagrant
 # can install their own Rubies using packages or however.
