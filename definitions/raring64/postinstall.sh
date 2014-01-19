@@ -43,7 +43,7 @@ lxc-destroy -n seed -f
 lxc-create -n seed -t ubuntu -- --release precise
 lxc-destroy -n seed -f
 
-lxc-create -n seed -t ubuntu -- --release raring
+lxc-create -n seed -t ubuntu -- --release trusty
 lxc-destroy -n seed -f
 
 apt-get clean
