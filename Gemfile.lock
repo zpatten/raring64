@@ -31,7 +31,7 @@ GEM
       posix-spawn (~> 0.3.6)
     highline (1.6.20)
     i18n (0.6.9)
-    json (1.8.1)
+    json (2.3.1)
     libxml-ruby (2.7.0)
     mime-types (1.25.1)
     mini_portile (0.5.2)
